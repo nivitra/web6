@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Solutions Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Web Development Solutions Showcase</h1>
+        </div>
+    </header>
+
+    <nav class="nav-tabs">
+        <div class="container">
+            <button class="tab-btn active" data-tab="solution1">Registration (HTML+CSS)</button>
+            <button class="tab-btn" data-tab="solution2">Login (HTML+CSS+JS)</button>
+            <button class="tab-btn" data-tab="solution3">Catalog (HTML+CSS)</button>
+            <button class="tab-btn" data-tab="solution4">Registration (Bootstrap)</button>
+            <button class="tab-btn" data-tab="solution5">Login (Bootstrap+JS)</button>
+            <button class="tab-btn" data-tab="solution6">Catalog (Bootstrap)</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Solution 1: Registration Page (HTML + CSS) -->
+            <div id="solution1" class="solution-panel active">
+                <h2>Registration Page (HTML + CSS)</h2>
+                
+                <div class="preview-section">
+                    <h3>Live Preview</h3>
+                    <div class="preview-container">
+                        <div class="reg-form-basic">
+                            <h2>Create Account</h2>
+                            <form>
+                                <div class="form-group-basic">
+                                    <label for="fullname1">Full Name</label>
+                                    <input type="text" id="fullname1" name="fullname" required>
+                                </div>
+                                <div class="form-group-basic">
+                                    <label for="email1">Email</label>
+                                    <input type="email" id="email1" name="email" required>
+                                </div>
+                                <div class="form-group-basic">
+                                    <label for="password1">Password</label>
+                                    <input type="password" id="password1" name="password" required>
+                                </div>
+                                <div class="form-group-basic">
+                                    <label for="confirm1">Confirm Password</label>
+                                    <input type="password" id="confirm1" name="confirm" required>
+                                </div>
+                                <button type="submit" class="btn-basic">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <h3>HTML Code</h3>
+                    <textarea readonly class="code-area" id="html1"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="reg-form">
+        <h2>Create Account</h2>
+        <form>
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirm" name="confirm" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</body>
+</html></textarea>
+                    <button class="copy-btn" onclick="copyCode('html1')">Copy HTML</button>
+
+                    <h3>CSS Code</h3>
+                    <textarea readonly class="code-area" id="css1">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.reg-form {
+    background: white;
+    border: 2px solid black;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.reg-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+
+input:focus {
+    outline: 2px solid black;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #333;
+}</textarea>
+                    <button class="copy-btn" onclick="copyCode('css1')">Copy CSS</button>
+                </div>
+            </div>
+
+            <!-- Solution 2: Login Page (HTML + CSS + JS) -->
+            <div id="solution2" class="solution-panel">
+                <h2>Login Page (HTML + CSS + JavaScript)</h2>
+                
+                <div class="preview-section">
+                    <h3>Live Preview</h3>
+                    <div class="preview-container">
+                        <div class="login-form-js">
+                            <h2>Login</h2>
+                            <form id="loginForm">
+                                <div class="form-group-basic">
+                                    <label for="loginEmail">Email</label>
+                                    <input type="email" id="loginEmail" name="email" required>
+                                    <div class="error-message" id="emailError"></div>
+                                </div>
+                                <div class="form-group-basic">
+                                    <label for="loginPassword">Password</label>
+                                    <input type="password" id="loginPassword" name="password" required>
+                                    <div class="error-message" id="passwordError"></div>
+                                </div>
+                                <button type="submit" class="btn-basic">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <h3>HTML Code</h3>
+                    <textarea readonly class="code-area" id="html2"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error-message" id="passwordError"></div>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html></textarea>
+                    <button class="copy-btn" onclick="copyCode('html2')">Copy HTML</button>
+
+                    <h3>CSS Code</h3>
+                    <textarea readonly class="code-area" id="css2">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-form {
+    background: white;
+    border: 2px solid black;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+
+input:focus {
+    outline: 2px solid black;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.error-message {
+    color: black;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    min-height: 1.2rem;
+    border: 1px solid black;
+    padding: 0.25rem;
+    background: #f0f0f0;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}</textarea>
+                    <button class="copy-btn" onclick="copyCode('css2')">Copy CSS</button>
+
+                    <h3>JavaScript Code</h3>
+                    <textarea readonly class="code-area" id="js2">document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    
+    // Reset error messages
+    emailError.textContent = '';
+    emailError.classList.remove('show');
+    passwordError.textContent = '';
+    passwordError.classList.remove('show');
+    
+    let isValid = true;
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        emailError.textContent = 'Please enter a valid email address';
+        emailError.classList.add('show');
+        isValid = false;
+    }
+    
+    // Password validation
+    if (password.length < 6) {
+        passwordError.textContent = 'Password must be at least 6 characters long';
+        passwordError.classList.add('show');
+        isValid = false;
+    }
+    
+    if (isValid) {
+        alert('Login successful!');
+    }
+});</textarea>
+                    <button class="copy-btn" onclick="copyCode('js2')">Copy JavaScript</button>
+                </div>
+            </div>
+
+            <!-- Solution 3: Catalog/Cart Page (HTML + CSS) -->
+            <div id="solution3" class="solution-panel">
+                <h2>Catalog/Cart Page (HTML + CSS)</h2>
+                
+                <div class="preview-section">
+                    <h3>Live Preview</h3>
+                    <div class="preview-container">
+                        <div class="catalog-container">
+                            <div class="products-grid">
+                                <div class="product-card">
+                                    <div class="product-image">[Image]</div>
+                                    <h4>Laptop</h4>
+                                    <p class="price">$999</p>
+                                    <button class="btn-basic add-to-cart" data-product="Laptop" data-price="999">Add to Cart</button>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image">[Image]</div>
+                                    <h4>Mouse</h4>
+                                    <p class="price">$25</p>
+                                    <button class="btn-basic add-to-cart" data-product="Mouse" data-price="25">Add to Cart</button>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image">[Image]</div>
+                                    <h4>Keyboard</h4>
+                                    <p class="price">$75</p>
+                                    <button class="btn-basic add-to-cart" data-product="Keyboard" data-price="75">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="cart-section">
+                                <h3>Shopping Cart</h3>
+                                <div id="cartItems" class="cart-items">
+                                    <p>Cart is empty</p>
+                                </div>
+                                <div class="cart-total">
+                                    <strong>Total: $<span id="cartTotal">0</span></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <h3>HTML Code</h3>
+                    <textarea readonly class="code-area" id="html3"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="catalog-container">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">[Image]</div>
+                <h4>Laptop</h4>
+                <p class="price">$999</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">[Image]</div>
+                <h4>Mouse</h4>
+                <p class="price">$25</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">[Image]</div>
+                <h4>Keyboard</h4>
+                <p class="price">$75</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">[Image]</div>
+                <h4>Monitor</h4>
+                <p class="price">$299</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">[Image]</div>
+                <h4>Headphones</h4>
+                <p class="price">$150</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">[Image]</div>
+                <h4>Speaker</h4>
+                <p class="price">$199</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="cart-section">
+            <h3>Shopping Cart</h3>
+            <div class="cart-items">
+                <p>Cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <strong>Total: $0</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html></textarea>
+                    <button class="copy-btn" onclick="copyCode('html3')">Copy HTML</button>
+
+                    <h3>CSS Code</h3>
+                    <textarea readonly class="code-area" id="css3">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+}
+
+.catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    border: 2px solid black;
+    padding: 1rem;
+    text-align: center;
+    background: white;
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    background: #f0f0f0;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.product-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.cart-section {
+    border: 2px solid black;
+    padding: 1rem;
+    background: white;
+}
+
+.cart-section h3 {
+    margin-bottom: 1rem;
+}
+
+.cart-items {
+    margin-bottom: 1rem;
+    min-height: 100px;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.2rem;
+}</textarea>
+                    <button class="copy-btn" onclick="copyCode('css3')">Copy CSS</button>
+                </div>
+            </div>
+
+            <!-- Solution 4: Registration Page (Bootstrap) -->
+            <div id="solution4" class="solution-panel">
+                <h2>Registration Page (Bootstrap)</h2>
+                
+                <div class="preview-section">
+                    <h3>Live Preview</h3>
+                    <div class="preview-container">
+                        <div class="bootstrap-demo">
+                            <div class="card" style="max-width: 400px; margin: 0 auto; border: 2px solid black;">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center mb-3">Create Account</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="bsFullname" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="bsFullname" style="border: 1px solid black;">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="bsEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="bsEmail" style="border: 1px solid black;">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="bsPassword" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="bsPassword" style="border: 1px solid black;">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="bsConfirm" class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="bsConfirm" style="border: 1px solid black;">
+                                        </div>
+                                        <button type="submit" class="btn btn-dark w-100">Register</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <h3>HTML Code</h3>
+                    <textarea readonly class="code-area" id="html4"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: white; color: black; }
+        .form-control { border: 1px solid black !important; }
+        .card { border: 2px solid black !important; }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card" style="max-width: 400px; width: 100%;">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Create Account</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html></textarea>
+                    <button class="copy-btn" onclick="copyCode('html4')">Copy HTML</button>
+                </div>
+            </div>
+
+            <!-- Solution 5: Login Page (Bootstrap + JS) -->
+            <div id="solution5" class="solution-panel">
+                <h2>Login Page (Bootstrap + JavaScript)</h2>
+                
+                <div class="preview-section">
+                    <h3>Live Preview</h3>
+                    <div class="preview-container">
+                        <div class="bootstrap-demo">
+                            <div class="card" style="max-width: 400px; margin: 0 auto; border: 2px solid black;">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center mb-3">Login</h2>
+                                    <form id="bsLoginForm">
+                                        <div class="mb-3">
+                                            <label for="bsLoginEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="bsLoginEmail" style="border: 1px solid black;">
+                                            <div class="invalid-feedback" id="bsEmailError"></div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="bsLoginPassword" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="bsLoginPassword" style="border: 1px solid black;">
+                                            <div class="invalid-feedback" id="bsPasswordError"></div>
+                                        </div>
+                                        <button type="submit" class="btn btn-dark w-100">Login</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <h3>HTML Code</h3>
+                    <textarea readonly class="code-area" id="html5"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: white; color: black; }
+        .form-control { border: 1px solid black !important; }
+        .card { border: 2px solid black !important; }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card" style="max-width: 400px; width: 100%;">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Login</h2>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback" id="emailError"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                        <div class="invalid-feedback" id="passwordError"></div>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html></textarea>
+                    <button class="copy-btn" onclick="copyCode('html5')">Copy HTML</button>
+
+                    <h3>JavaScript Code</h3>
+                    <textarea readonly class="code-area" id="js5">document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    
+    // Reset validation states
+    email.classList.remove('is-invalid');
+    password.classList.remove('is-invalid');
+    emailError.textContent = '';
+    passwordError.textContent = '';
+    
+    let isValid = true;
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+        email.classList.add('is-invalid');
+        emailError.textContent = 'Please enter a valid email address';
+        isValid = false;
+    }
+    
+    // Password validation
+    if (password.value.length < 6) {
+        password.classList.add('is-invalid');
+        passwordError.textContent = 'Password must be at least 6 characters long';
+        isValid = false;
+    }
+    
+    if (isValid) {
+        alert('Login successful!');
+        email.classList.add('is-valid');
+        password.classList.add('is-valid');
+    }
+});</textarea>
+                    <button class="copy-btn" onclick="copyCode('js5')">Copy JavaScript</button>
+                </div>
+            </div>
+
+            <!-- Solution 6: Catalog/Cart Page (Bootstrap) -->
+            <div id="solution6" class="solution-panel">
+                <h2>Catalog/Cart Page (Bootstrap)</h2>
+                
+                <div class="preview-section">
+                    <h3>Live Preview</h3>
+                    <div class="preview-container">
+                        <div class="bootstrap-demo">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card" style="border: 2px solid black;">
+                                                <div class="card-body text-center">
+                                                    <div style="height: 100px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                                    <h5>Laptop</h5>
+                                                    <p class="fw-bold">$999</p>
+                                                    <button class="btn btn-dark btn-sm bs-add-to-cart" data-product="Laptop" data-price="999">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card" style="border: 2px solid black;">
+                                                <div class="card-body text-center">
+                                                    <div style="height: 100px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                                    <h5>Mouse</h5>
+                                                    <p class="fw-bold">$25</p>
+                                                    <button class="btn btn-dark btn-sm bs-add-to-cart" data-product="Mouse" data-price="25">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card" style="border: 2px solid black;">
+                                                <div class="card-body text-center">
+                                                    <div style="height: 100px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                                    <h5>Keyboard</h5>
+                                                    <p class="fw-bold">$75</p>
+                                                    <button class="btn btn-dark btn-sm bs-add-to-cart" data-product="Keyboard" data-price="75">Add to Cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" style="border: 2px solid black;">
+                                        <div class="card-header">
+                                            <h5>Shopping Cart</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="bsCartItems">
+                                                <p>Cart is empty</p>
+                                            </div>
+                                            <hr>
+                                            <div class="text-end">
+                                                <strong>Total: $<span id="bsCartTotal">0</span></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <h3>HTML Code</h3>
+                    <textarea readonly class="code-area" id="html6"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: white; color: black; }
+        .card { border: 2px solid black !important; }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="height: 120px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                <h5 class="card-title">Laptop</h5>
+                                <p class="card-text fw-bold">$999</p>
+                                <button class="btn btn-dark btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="height: 120px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                <h5 class="card-title">Mouse</h5>
+                                <p class="card-text fw-bold">$25</p>
+                                <button class="btn btn-dark btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="height: 120px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                <h5 class="card-title">Keyboard</h5>
+                                <p class="card-text fw-bold">$75</p>
+                                <button class="btn btn-dark btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="height: 120px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                <h5 class="card-title">Monitor</h5>
+                                <p class="card-text fw-bold">$299</p>
+                                <button class="btn btn-dark btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="height: 120px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                <h5 class="card-title">Headphones</h5>
+                                <p class="card-text fw-bold">$150</p>
+                                <button class="btn btn-dark btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="height: 120px; background: #f0f0f0; border: 1px solid black; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">[Image]</div>
+                                <h5 class="card-title">Speaker</h5>
+                                <p class="card-text fw-bold">$199</p>
+                                <button class="btn btn-dark btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Shopping Cart</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="cartItems">
+                            <p>Cart is empty</p>
+                        </div>
+                        <hr>
+                        <div class="text-end">
+                            <strong>Total: $<span id="cartTotal">0</span></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html></textarea>
+                    <button class="copy-btn" onclick="copyCode('html6')">Copy HTML</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
